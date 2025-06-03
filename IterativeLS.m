@@ -7,7 +7,7 @@ function x = IterativeLS(A, b, epsilon, k)
     % k: sample size in each iteration
     % OUTPUT:
     % x: an approximation solution of Ax=b
-    f = @GaussianSampler;
+    f = @FastJLSampler;
     r = b;
     x = zeros(size(A, 2), 1);
     while norm(r) > epsilon
